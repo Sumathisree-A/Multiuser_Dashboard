@@ -1,0 +1,27 @@
+{% extends "accounts/base.html" %}
+{% block content %}
+<h2>Signup</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-grid">
+        {{ form.first_name.label_tag }} {{ form.first_name }}
+        {{ form.last_name.label_tag }} {{ form.last_name }}
+
+        {{ form.username.label_tag }} {{ form.username }}
+        {{ form.email.label_tag }} {{ form.email }}
+
+        {{ form.password.label_tag }} {{ form.password }}
+        {{ form.confirm_password.label_tag }} {{ form.confirm_password }}
+
+        {{ form.user_type.label_tag }} {{ form.user_type }}
+        {{ form.profile_picture.label_tag }} {{ form.profile_picture }}
+
+        {{ form.address_line1.label_tag }} {{ form.address_line1 }}
+        {{ form.city.label_tag }} {{ form.city }}
+
+        {{ form.state.label_tag }} {{ form.state }}
+        {{ form.pincode.label_tag }} {{ form.pincode }}
+    </div>
+    <button type="submit">Register</button>
+</form>
+{% endblock %}

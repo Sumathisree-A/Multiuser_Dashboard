@@ -1,0 +1,7 @@
+{% extends "accounts/base.html" %}
+{% block content %}
+<h2>{{ user.profile.user_type|capfirst }} Dashboard</h2>
+<p><strong>Full Name:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+<p><strong>Email:</strong> {{ user.email }}</p>
+<p><strong>Address:</strong> {{ user.profile.address_line1 }}, {{ user.profile.city }}, {{ user.profile.state }} - {{ user.profile.pincode }}</p>
+{% endblock %}
