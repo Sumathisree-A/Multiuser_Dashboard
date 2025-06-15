@@ -1,9 +1,15 @@
 {% extends "accounts/base.html" %}
+{% load static %}
+
 {% block content %}
-<h2>Login</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-</form>
+<!-- Message display block -->
+
+<div class="container mt-5" style="max-width: 500px;">
+  <h2 class="text-center mb-4">Login</h2>
+  <form method="post" class="border p-4 rounded shadow">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+  </form>
+</div>
 {% endblock %}
